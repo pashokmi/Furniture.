@@ -1,0 +1,16 @@
+
+@mixin media($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+
+$white: #fff;
+
+
+// $xxl: 1520px;
+$xl: 1220px;
+$lg: 1024px;
+$md: 768px;
+$sm: 425px;
