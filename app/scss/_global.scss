@@ -4,16 +4,15 @@ body {
 }
 
 body {
-  // font-size: 16px;
-  // line-height: 1;
-  // font-style: normal;
-  // font-family: "Rubik", sans-serif;
-  // font-weight: 400;
+  font-size: 18px;
+  line-height: 125%;
+  font-style: normal;
+  font-family: Proxima Nova;
+  font-weight: 700;
   // letter-spacing: 0.6px;
-  // color: #393c2b;
-  // background-color: #f2f2f2;
-  display: flex;
-  flex-direction: column;
+  color: $black;
+  background-color: $white;
+ 
 
 }
 
@@ -24,10 +23,6 @@ body {
   width: 100%;
 }
 
-.main {
-  flex-grow: 1;
-}
-
 .sr-only {
   font-size: 0;
   overflow: hidden;
@@ -35,5 +30,6 @@ body {
   height: 0px;
 }
 .title {
+  font-size: 48px;
   
 }

@@ -1,5 +1,5 @@
 {
-  "name": "start_gulp",
+  "name": "Furniture",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -21,7 +21,5 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.0"
   },
-  "dependencies": {
-    
-  }
+  "dependencies": {}
 }
