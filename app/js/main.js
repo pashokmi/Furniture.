@@ -1,74 +1,38 @@
-$(function () {
-  
-  $('.slider__inner').slick({
-    dots: true,
-    arrows:false,
-    fade:true,
-     slidesToShow: 1,
-       slidesToScroll: 1,
-       autoplay: true,
-       autoplaySpeed: 3000,
-  });
-})
+const menuBtnActive = document.querySelector('.menu__btn');
+const menuActive = document.querySelector('.menu__list')
+// const swiper = document.querySelector('.swiper-container').swiper;
 
+menuBtnActive.addEventListener("click", function () {
+  menuBtnActive.classList.toggle('menu__btn--active');
+});
 
-document.addEventListener('DOMContentLoaded', () => {
-  const accordions = document.querySelectorAll('.accordion');
-
-  accordions.forEach(el => {
-    el.addEventListener('click', (e) => {
-      const self = e.currentTarget;
-      const control = self.querySelector('.accordion__control');
-      const content = self.querySelector('.accordion__content');
-
-      self.classList.toggle('open');
-
-      if (self.classList.contains('open')) {
-        control.setAttribute('aria-expanded', true);
-        content.setAttribute('aria-hidden', false);
-        content.style.maxHeight = content.scrollHeight + 'px';
-      } else {
-        control.setAttribute('aria-expanded', false);
-        content.setAttribute('aria-hidden', true);
-        content.style.maxHeight = null;
-      }
-    });
-  });
+document.querySelector('.menu__btn').addEventListener('click', () => {
+  document.querySelector('.menu__list').classList.toggle('menu__list--hide');
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const tabs = document.querySelector('.tabs');
-  const tabsBtn = document.querySelectorAll('.tabs__btn');
-  const tabsContent = document.querySelectorAll('.tabs__content');
 
-  if (tabs) {
-    tabs.addEventListener('click', (e) => {
-      if (e.target.classList.contains('tabs__btn')) {
-        const tabsPath = e.target.dataset.tabsPath;
-        tabsBtn.forEach(el => {
-          el.classList.remove('tabs__btn--active')
-        });
-        document.querySelector(`[data-tabs-path="${tabsPath}"]`).classList.add('tabs__btn--active');
-        tabsHandler(tabsPath);
-      }
-     
-    });
+const swiper = new Swiper('.swiper-container', {
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+
+    1220: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+
+    525: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    300: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
   }
-
-  const tabsHandler = (path) => {
-    tabsContent.forEach(el => {
-      el.classList.remove('tabs__content--active')
-    });
-    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
-  };
-});
-
-
-$('.header__menu').on('click', function () {
-  $('.header__menu').toggleClass('header__menu--active')
-});
-
-$('.header__menu').on('click', function () {
-  $('.menu__items').toggleClass('menu__items--active')
-});
+})

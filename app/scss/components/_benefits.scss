@@ -1,0 +1,140 @@
+.benefits {
+  margin-bottom: 100px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    // margin-right: 30px;
+  }
+  &__img {
+    max-width: 586px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    max-width: 586px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    @include media(1024px) {
+      max-width: 525px;
+    }
+    @include media(425px){
+      max-width: 425px;
+      height: 100%;
+    }
+
+    &:hover {
+      .benefits__text {
+        transform: translateY(0);
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      background: linear-gradient(
+        0deg,
+        rgba(30, 46, 54, 0.5),
+        rgba(30, 46, 54, 0.5)
+      );
+    }
+  }
+  &__text {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    color: $white;
+    z-index: 2;
+    transform: translateY(84px);
+    transition: transform 0.5s;
+    @include media(1024px) {
+      transform: translateY(94px);
+    }
+  }
+  &__subtitle {
+    display: inline-block;
+    font-size: 36px;
+    border-bottom: 3px solid $accent;
+    margin-bottom: 30px;
+    @include media(1400px) {
+      font-size: 30px;
+    }
+    @include media(1024px) {
+      font-size: 20px;
+    }
+  }
+  &__desc {
+    margin-bottom: 40px;
+    max-width: 500px;
+  }
+}
+.swiper-container {
+  max-width: 1885px;
+  width: 100%;
+  position: relative;
+}
+.swiper-slide {
+  max-width: 100%;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  border-radius: 50%;
+  border: 1px solid $white;
+  cursor: pointer;
+  &:hover{
+    background-color: #fff;
+    .swiper-button-next--svg,
+    .swiper-button-prev--svg{
+      fill: $black;
+    }
+  }
+}
+.swiper-button-prev {
+  top: 50%;
+  left: 30px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  &--svg {
+    position: absolute;
+    right: 2px;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    z-index: 10;
+    fill: $white;
+  }
+}
+.swiper-button-next {
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  &--svg {
+    fill: $white;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+   
+  }
+}

@@ -9,14 +9,17 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
-  @@include('componentss/_header.html')
+<body id="body">
+  @@include('components/_header.html')
   <main class="main">
-    <h1 class="sr-only">Furniture.test</h1>
-
-    
+    <!-- <h1 class="sr-only">Furniture.test</h1> -->
+     @@include('components/_slider.html')
+   @@include('components/_benefits.html')
+   @@include('components/_product.html')
+   @@include('components/_about.html')
+    @@include('components/_question.html') 
   </main>
-  <!-- @@include('componentss/_footer.html') -->
+  @@include('components/_footer.html')
 
   <script src="js/main.min.js"></script>
 

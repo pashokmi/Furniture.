@@ -1,0 +1,226 @@
+.footer {
+  padding-top: 10px;
+  &__wrapper {
+    display: flex;
+  }
+
+  &__arrow {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: $accent;
+    border-radius: 50%;
+    top: -9px;
+    left: 36px;
+    @include media(1024px) {
+      top: -30px;
+    }
+  }
+  &__arrow-svg {
+    width: 50px;
+    height: 20px;
+    margin-top: 15px;
+  }
+  &__inner {
+    background-color: $black;
+    color: $white;
+    padding: 31px 55px 15px 33px;
+    position: relative;
+    max-width: 830px;
+    width: 100%;
+    @include media(1220px) {
+      padding: 20px 15px 15px 10px;
+    }
+    @include media(1024px) {
+      max-width: 1024px;
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+@include media(545px){
+
+}
+  }
+  &__list {
+    @include media(545px) {
+      width: 100%;
+      margin-bottom: 15px;
+      
+      
+      
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  &__phone {
+    padding-left: 30px;
+    display: block;
+    position: relative;
+    margin-bottom: 35px;
+    &:hover {
+      color: $accent;
+    }
+    &:first-child {
+      margin-bottom: 5px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 24px;
+        top: 0;
+        left: 0;
+        background-image: url("../images/icons/smartphone-f.svg");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    text-transform: uppercase;
+    padding-left: 20px;
+    position: relative;
+    &::before {
+      content: "—";
+      position: absolute;
+      color: $accent;
+      left: 0;
+      top: 0;
+    }
+    &:hover {
+      color: $accent;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &__geo {
+    position: relative;
+    padding-left: 30px;
+    &:hover {
+      color: $accent;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 24px;
+      top: 0;
+      left: 0;
+      background-image: url("../images/icons/map-pin.svg");
+      background-repeat: no-repeat;
+    }
+  }
+  &__schedule {
+    position: relative;
+    padding-left: 30px;
+    &:hover {
+      color: $accent;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 24px;
+      top: 0;
+      left: 0;
+      background-image: url("../images/icons/calendar.svg");
+      background-repeat: no-repeat;
+    }
+  }
+  &__social {
+    user-select: none;
+    &--telegram {
+      left: -224px;
+      top: 28px;
+      @include media(1550px) {
+        left: -155px;
+      }
+    }
+    &--facebook {
+      left: -179px;
+      top: 28px;
+      @include media(1550px) {
+        left: -115px;
+      }
+    }
+    &--instagram {
+      left: -134px;
+      top: 28px;
+      @include media(1550px) {
+        left: -70px;
+      }
+    }
+  }
+  &__social-item {
+    position: relative;
+  }
+  &__social-svg {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    fill: $white;
+    &:hover {
+      fill: $accent;
+    }
+  }
+  &__copy {
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    @include media(1220px) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    @include media(1024px) {
+      justify-content: space-between;
+    }
+    @include media(768px) {
+      font-size: 12px;
+    }
+  }
+  &__copy-text {
+    @include media(1220px) {
+      margin-bottom: 10px;
+    }
+    @include media(768px) {
+    }
+  }
+  &__copy-link {
+    position: relative;
+    text-transform: uppercase;
+    padding-left: 30px;
+    letter-spacing: -1.7px;
+    @include media(425px){
+      letter-spacing: normal;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 24px;
+      top: 0;
+      left: 0;
+      background-image: url("../images/icons/logo-g.svg");
+      background-repeat: no-repeat;
+    }
+  }
+  &__bg-img {
+    height: 520px;
+    object-fit: cover;
+    @include media(1024px) {
+      display: none;
+    }
+  }
+}
+.logo--footer {
+  margin-bottom: 50px;
+  display: inline-block;
+}

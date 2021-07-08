@@ -1,0 +1,170 @@
+.slider {
+  margin-bottom: 100px;
+  @include media(425px) {
+    margin-bottom: 50px;
+  }
+  &__inner {
+    position: relative;
+  }
+  &__img {
+    object-fit: cover;
+    height: 785px;
+    max-width: 1920px;
+    width: 100%;
+    @include media(1024px) {
+      height: 535px;
+    }
+    @include media(768px) {
+      height: 335px;
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__icon {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $white;
+    &::before {
+      content: "";
+      background-image: url("../images/icons/scroll.svg");
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 200%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-repeat: no-repeat;
+    }
+  }
+  &__text {
+    max-width: 460px;
+    width: 100%;
+    position: absolute;
+    left: 50px;
+    top: 0;
+    background-color: $white;
+    text-align: center;
+    border-left: 15px solid $accent;
+    padding: 100px 60px 100px 20px;
+    @include media(1024px) {
+      max-width: 300px;
+      padding: 50px 10px;
+      left: 25px;
+    }
+    @include media(768px) {
+      max-width: 175px;
+      padding: 15px 5px;
+      left: 10px;
+    }
+  }
+  &__title {
+    font-size: 64px;
+    line-height: 1;
+    margin-bottom: 50px;
+    @include media(1024px) {
+      font-size: 46px;
+      margin-bottom: 25px;
+    }
+    @include media(768px) {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+  }
+  &__subtitle {
+    font-size: 36px;
+    margin-bottom: 10px;
+    @include media(1024px) {
+      font-size: 24px;
+    }
+    @include media(768px) {
+      font-size: 20px;
+    }
+  }
+  &__desc {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    @include media(1024px) {
+      font-size: 20px;
+    }
+    @include media(768px) {
+      font-size: 16px;
+    }
+  }
+  &__info {
+    display: inline-block;
+    border: none;
+    text-transform: uppercase;
+    background-color: $accent;
+    border-radius: 3px;
+    padding: 14px 46px;
+    color: $white;
+    margin-bottom: 50px;
+    @include media(768px) {
+      padding: 5px 25px;
+      margin-bottom: 25px;
+    }
+  }
+  &__number {
+    padding-bottom: 35px;
+  }
+  &__number-first {
+    font-size: 36px;
+  }
+  &__number-last {
+    font-size: 24px;
+  }
+
+  &__btn-prev,
+  &__btn-next {
+    position: absolute;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    border-radius: 50%;
+    border: 1px solid $black;
+    cursor: pointer;
+    &:hover {
+      background-color: $black;
+      .slider__btn-prev--svg,
+      .slider__btn-next--svg {
+        fill: $white;
+      }
+    }
+  }
+  &__btn-next {
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include media(768px) {
+      top: 86%;
+      left: 58%;
+    }
+  }
+  &__btn-prev {
+    top: 83%;
+    right: 52%;
+    transform: translate(-50%, -50%);
+    @include media(768px) {
+      top: 86%;
+      right: 46%;
+    }
+  }
+
+  &__btn-prev--svg,
+  &__btn-next--svg {
+    width: 15px;
+    height: 15px;
+    top: 60%;
+    left: 50%;
+    transform: translate(0, 40%);
+  }
+}

@@ -1,0 +1,81 @@
+.question {
+  margin-bottom: 100px;
+  &__inner {
+    background-repeat: no-repeat;
+    background-size: 82%;
+    background-position: center left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include media(1400px){
+      background-size: 100%;
+    }
+    @include media(1024px){
+      background-size: 0;
+      justify-content: center
+    }
+  }
+  &__item {
+    max-width: 515px;
+    width: 100%;
+    border-left: 15px solid $accent;
+    background-color: $white;
+    padding: 50px 50px 50px 30px;
+    margin: 100px 0;
+    @include media(1400px){
+      opacity: 0.9;
+    }
+    @include media(1024px){
+      margin: 0;
+    }
+  }
+  &__item-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  &__input {
+    width: 100%;
+    margin-bottom: 15px;
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 125%;
+    border: 1px solid $black;
+    border-radius: 3px;
+    color: $black;
+    padding: 14px 15px;
+    &::placeholder {
+      opacity: 0.6;
+    }
+  }
+  &__text {
+    font-weight: 400;
+    max-width: 420px;
+    width: 100%;
+    font-size: 18px;
+    
+  }
+  &__btn {
+    text-transform: uppercase;
+    border: none;
+    background-color: $accent;
+    border-radius: 3px;
+    padding: 14px 46px;
+    color: $white;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.phone--question {
+  display: inline-block;
+  font-weight: 700;
+  padding-left: 0;
+  &::after,
+  &::before {
+    display: none;
+    
+  }
+}
